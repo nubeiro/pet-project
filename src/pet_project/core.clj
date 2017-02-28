@@ -8,4 +8,8 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (map titleize ["Hamsters" "Ragnarok"])))
+  (println (map titleize ["Hamsters" "Ragnarok"]))
+  (println (map titleize '("Empathy" "Decorating")))
+  (println (map titleize #{"Elbows" "Soap Carving"}))
+  (println (map #(titleize (first %))
+                {:uncomfortable-thing "Winking"})))
